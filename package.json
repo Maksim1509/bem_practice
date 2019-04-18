@@ -1,5 +1,5 @@
 {
-  "name": "web dev",
+  "name": "web_dev",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,5 +18,8 @@
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1"
   }
 }
