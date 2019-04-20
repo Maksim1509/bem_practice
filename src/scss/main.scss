@@ -1,9 +1,11 @@
 @import './font.scss';
-
+$semibold: 'Open Sans Semibold';
 body {
+    max-width: 1400px;
     background-color: grey;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
+    font-family: $semibold;
 }
 ul, li {
     display: block;
@@ -17,8 +19,6 @@ ul, li {
     align-items: center;
     color: #212121;
     justify-content: space-around;
-    max-width: 1920px;
-    margin: auto;
     padding: 20px 0;
     background-color: #ffffff;
 }
@@ -33,11 +33,37 @@ ul, li {
 }
 
 .menu__item a {
-    font-family: 'Open Sans Semibolt', serif;
     color: #212121;
     font-size: 20px;
     text-decoration: none;
     &:hover {
         color: #868686;
+    }
+}
+
+.header {
+    background-image: url(../img/header.png);
+    display: flex;
+    padding: 180px 0;
+    color: white;
+    flex-wrap: wrap;
+   justify-content: center;
+    background-size: cover;
+    background-position: 0 100%;
+    .header__title {
+        font-size: 60px;
+        margin-bottom: 0;
+        flex-grow: 1000;
+        margin: auto;
+    }
+    .header__text {
+        font-family: 'Open Sans Regular';
+        font-size: 22px;
+        margin-bottom: 110px;
+        flex-grow: 0;
+    }
+    .button {
+        display: inline-block;
+        margin: 0;
     }
 }
