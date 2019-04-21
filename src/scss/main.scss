@@ -1,18 +1,17 @@
 @import './font.scss';
 $semibold: 'Open Sans Semibold';
+$regular: 'Open Sans Regular';
 body {
     max-width: 1400px;
-    background-color: grey;
     padding: 0;
     margin: 0 auto;
-    font-family: $semibold;
+    font-family: $regular;
 }
 ul, li {
     display: block;
     padding: 0;
     margin: 0;
 }
-
 
 .menu-bar {
     display: flex;
@@ -22,17 +21,15 @@ ul, li {
     padding: 20px 0;
     background-color: #ffffff;
 }
-
 .menu {
     display: flex;
     justify-content: flex-end;
 }
-
 .menu__item {
     margin-left: 37px;
 }
-
 .menu__item a {
+    font-family: $semibold;
     color: #212121;
     font-size: 20px;
     text-decoration: none;
@@ -40,30 +37,82 @@ ul, li {
         color: #868686;
     }
 }
-
+/*header*/
 .header {
     background-image: url(../img/header.png);
     display: flex;
     padding: 180px 0;
     color: white;
-    flex-wrap: wrap;
-   justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-size: cover;
     background-position: 0 100%;
     .header__title {
         font-size: 60px;
-        margin-bottom: 0;
-        flex-grow: 1000;
-        margin: auto;
+        margin-bottom: 0; 
     }
     .header__text {
         font-family: 'Open Sans Regular';
         font-size: 22px;
         margin-bottom: 110px;
-        flex-grow: 0;
     }
-    .button {
-        display: inline-block;
-        margin: 0;
+    .header__button {
+        display: flex;
+        justify-content: space-around;
     }
 }
+.button {
+    font-family: $semibold;
+    font-size: 20px;
+    padding: 10px 25px;
+    margin: 0 10px;
+    color: white;
+    transition: 0.3s;
+}
+.button_empty {
+    background: transparent;
+    border: 2px solid white;
+    &:hover {
+        background: #043d37;
+        border: 2px dashed white;
+    }        
+}   
+.button_full {
+    background: #00897b;
+    border: 2px solid #00897b;
+    &:hover {
+        background: #043d37;
+        border: 2px dashed white;
+    }
+}   
+/*about*/
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 125px 40px;
+    .about-us__text {
+       text-align: center;
+    }
+}
+.about-us__design {
+    display: flex;
+    
+    padding: 125px 0;
+    img {
+        width: 64px;
+        height: 64px;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 60px;
+        p {
+            text-align: center;
+        }
+    }
+}
+
+
