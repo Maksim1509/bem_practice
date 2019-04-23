@@ -121,13 +121,37 @@ html(lang="en")
                 button.button(val="off" filter="ud") UI/UX DESIGN
                 button.button(val="off" filter="moc") MOCKUPS
             .portfolio-items.services-types
-                img(filter="wd" val="off" src="../img/item1.png", alt="image")
-                img(filter="wd" val="off" src="../img/item2.png", alt="image")
-                img(filter="ud" val="off" src="../img/item3.png", alt="image")
-                img(filter="ud" val="off" src="../img/item4.png", alt="image")
-                img(filter="moc" val="off" src="../img/item5.png", alt="image")
-                img(filter="moc" val="off" src="../img/item6.png", alt="image")
-            button.button(val="on" filter="all") VIEW ALL
+                div.portfolio-items__item
+                    img(filter="wd" val="off" src="../img/item1.png", alt="image")
+                    .text
+                        h5 Hand Watch
+                        p Web disign
+                div.portfolio-items__item
+                    img(filter="wd" val="off" src="../img/item2.png", alt="image")
+                    .text
+                        h5 One day pass
+                        p Web disign
+                div.portfolio-items__item
+                    img(filter="ud" val="off" src="../img/item3.png", alt="image")
+                    .text
+                        h5 Model T-shirt
+                        p UI/UX Design
+                div.portfolio-items__item
+                    img(filter="ud" val="off" src="../img/item4.png", alt="image")
+                    .text
+                        h5 Flask
+                        p UI/UX Design
+                div.portfolio-items__item
+                    img(filter="moc" val="off" src="../img/item5.png", alt="image")
+                    .text
+                        h5 Eplemost
+                        p Mockups
+                div.portfolio-items__item
+                    img(filter="moc" val="off" src="../img/item6.png", alt="image")
+                    .text
+                        h5 The Kitchens
+                        p Mockups
+            button.button(val="on" filter="view-all") VIEW ALL
         script(src="../js/index.js")
 
 

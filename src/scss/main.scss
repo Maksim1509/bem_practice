@@ -206,13 +206,47 @@ ul, li {
             color: #212121;
         }
     }
-    .portfolio-items {
-        margin: 115px 0 122px;
-        
+    .focused {
+        background: transparent;
+        color: #212121;
     }
-    img {
-        margin-right: 30px;
-        margin-bottom: 30px;
-        transition: 0.5s;
+    .portfolio-items {
+        margin: 115px 0 122px; 
     }
 }
+.portfolio-items__item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    .text {
+        display: none;
+
+    }
+    &:hover {
+        .text {
+            display: block;
+            position: absolute;
+            text-align: center;
+            top: 40%;
+            left: 40%;
+            color: white;
+            font-family: $semibold;
+            font-size: 20px;
+            .p {
+                font-size: 15px;
+            }
+        }
+        img {
+            filter: brightness(25%);
+            transition: 0.3s;
+        }
+    }
+}
+
+
+
+
+
+
+
+
