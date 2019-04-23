@@ -9,7 +9,7 @@ html(lang="en")
         link(rel="stylesheet", href="../scss/main.scss")
     body
         header.menu-bar
-                img(src="../img/logo.png", alt="TOXIN").logo
+                include ./logo
                 nav
                     ul.menu
                         li.menu__item
@@ -30,8 +30,8 @@ html(lang="en")
             h1.header__title Web development project
             p.header__text Very suitable to support all web development projects
             .header__button
-                button.button.button_empty OUR SERVICES
-                button.button.button_full HIRE IS NOW
+                button.button OUR SERVICES
+                button.button HIRE IS NOW
         section.about-us
             h2.about-us__title About Us
             p.about-us__text.
@@ -110,6 +110,26 @@ html(lang="en")
                         dignissimos ducimus qui blanditiis
                         praesentium voluptatum iti atque corrupti quos.
                     button.button READ MORE
+        section.services.portfolio
+            h2.services__title Latest Works
+            p.services__text.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+            .portfolio-buttons
+                button.button(val="on" filter="all") ALL
+                button.button(val="off" filter="wd") WEB DESIGN
+                button.button(val="off" filter="ud") UI/UX DESIGN
+                button.button(val="off" filter="moc") MOCKUPS
+            .portfolio-items.services-types
+                img(filter="wd" val="off" src="../img/item1.png", alt="image")
+                img(filter="wd" val="off" src="../img/item2.png", alt="image")
+                img(filter="ud" val="off" src="../img/item3.png", alt="image")
+                img(filter="ud" val="off" src="../img/item4.png", alt="image")
+                img(filter="moc" val="off" src="../img/item5.png", alt="image")
+                img(filter="moc" val="off" src="../img/item6.png", alt="image")
+            button.button(val="on" filter="all") VIEW ALL
+        script(src="../js/index.js")
+
 
 
                         

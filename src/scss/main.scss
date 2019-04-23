@@ -12,7 +12,6 @@ ul, li {
     padding: 0;
     margin: 0;
 }
-
 .menu-bar {
     display: flex;
     align-items: center;
@@ -39,14 +38,13 @@ ul, li {
 }
 /*header*/
 .header {
-    background-image: url(../img/header.png);
+    background: url(../img/header.png) no-repeat 0 100%;
     display: flex;
     padding: 180px 0;
     color: white;
     align-items: center;
     flex-direction: column;
-    background-size: cover;
-    background-position: 0 100%;
+    background-size: 100%;
     .header__title {
         font-size: 60px;
         margin-bottom: 0; 
@@ -66,26 +64,16 @@ ul, li {
     font-size: 20px;
     padding: 10px 25px;
     margin: 0 10px;
+    background-color: #00897b;
+    border: 2px solid #00897b;
     color: white;
     transition: 0.3s;
     cursor: pointer;
-}
-.button_empty {
-    background: transparent;
-    border: 2px solid white;
     &:hover {
-        background: #043d37;
-        border: 2px dashed white;
+        background: transparent;
+        border: 2px solid white;
     }        
-}   
-.button_full {
-    background: #00897b;
-    border: 2px solid #00897b;
-    &:hover {
-        background: #043d37;
-        border: 2px dashed white;
-    }
-}   
+}  
 /*about*/
 .about-us {
     display: flex;
@@ -159,19 +147,18 @@ ul, li {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
     .sevices-types__type {
-        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        
         padding: 56px 30px 48px;
         background-color: white;
         margin-right: 30px;
         margin-bottom: 30px;
         color: #212121;
-        transition: 0.3s;
+        transition: 0.5s;
         .icon {
             font-size: 62px;
         }
@@ -193,6 +180,7 @@ ul, li {
             margin-top: 40px;
             background: transparent;
             border: 2px solid #212121;
+            transition: 0.3s;
         }
         &:hover {
             background-color: #00897b;
@@ -201,7 +189,30 @@ ul, li {
             .button {
                 color: white;
                 border: 2px solid white;
+                transition: 0.3s;
             }
         }
+    }
+}
+/*portfolio*/
+.portfolio {
+    background-color: white;
+    .button {
+        color: white;
+        border: 2px solid #00897b;
+        background: #00897b;
+        &:hover {
+            background: transparent;
+            color: #212121;
+        }
+    }
+    .portfolio-items {
+        margin: 115px 0 122px;
+        
+    }
+    img {
+        margin-right: 30px;
+        margin-bottom: 30px;
+        transition: 0.5s;
     }
 }
