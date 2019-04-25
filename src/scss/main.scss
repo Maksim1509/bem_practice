@@ -318,19 +318,35 @@ ul, li {
     }
 }
 .team {
-    display: flex;
+    
     max-width: 1400px;
-    justify-content: center;
+    text-align: center;
+
 }
 .team-member {
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
     text-align: center;
     width: 370px;
-    padding-right: 50px;
-    
-    
+    margin-left: 50px;
+    img {
+        margin: auto;
+        width: 340px;
+    }
 }
-.slick-slider {
-    margin: 0 auto;
+.dots-style {
+    display: flex;
+    justify-content: center;
+    margin-top: 115px;
+    button {
+        border: none;
+        font-size: 0;
+        background: #00897b;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin: 5px;
+    }
 }
+.dots-style li[class="slick-active"] button {
+    background: #3949ab;
+ }

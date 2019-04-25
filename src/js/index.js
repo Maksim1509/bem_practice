@@ -75,6 +75,7 @@ $('document').ready(
     slidesToScroll: 3,
     arrows: false,
     dots: true,
+    dotsClass: 'dots-style',
   }),
 );
 
