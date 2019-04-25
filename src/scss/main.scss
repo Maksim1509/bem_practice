@@ -317,3 +317,20 @@ ul, li {
         }
     }
 }
+.team {
+    display: flex;
+    max-width: 1400px;
+    justify-content: center;
+}
+.team-member {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 370px;
+    padding-right: 50px;
+    
+    
+}
+.slick-slider {
+    margin: 0 auto;
+}

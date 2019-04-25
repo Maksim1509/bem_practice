@@ -1,5 +1,6 @@
 /* eslint-disable linebreak-style */
 import $ from 'jquery';
+import slick from 'slick-carousel';
 
 $('document').ready(
   () => $('.button[filter="wd"]').click(
@@ -66,3 +67,14 @@ $('document').ready(
     },
   ),
 );
+
+$('document').ready(
+  () => $('.team').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: false,
+    dots: true,
+  }),
+);
+
