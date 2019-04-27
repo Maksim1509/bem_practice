@@ -7,6 +7,8 @@ html(lang="en")
         title web dev
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
         link(rel="stylesheet", href="../../node_modules/slick-carousel/slick/slick.css")
+        link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
+
         link(rel="stylesheet", href="../scss/main.scss")
     body
         header.menu-bar
@@ -198,7 +200,7 @@ html(lang="en")
                             li 24/7 Suports
                     .plan__footer
                         button.button Order Now
-        section.services
+        section.services.our-team
             h2.services__title Our team
             p.services__text.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -207,48 +209,105 @@ html(lang="en")
                 .team-member
                     img(src="../img/team1.png", alt="photo")
                     p.team-member__name Jon Doel
-                    p.team-member__posotion General Meneger
+                    p.team-member__position General Meneger
                     include ./icon.pug
                 .team-member
                     img(src="../img/team2.png", alt="photo")
                     p.team-member__name Jon Doel
-                    p.team-member__posotion General Meneger
+                    p.team-member__position General Meneger
                     include ./icon.pug
                 .team-member
                     img(src="../img/team3.png", alt="photo")
                     p.team-member__name Jon Doel
-                    p.team-member__posotion General Meneger
+                    p.team-member__position General Meneger
                     include ./icon.pug
                 .team-member
                     img(src="../img/team1.png", alt="photo")
                     p.team-member__name Jon Doel
-                    p.team-member__posotion General Meneger
+                    p.team-member__position General Meneger
                     include ./icon.pug
                 .team-member
                     img(src="../img/team2.png", alt="photo")
                     p.team-member__name Jon Doel
-                    p.team-member__posotion General Meneger
+                    p.team-member__position General Meneger
                     include ./icon.pug
                 .team-member
                     img(src="../img/team3.png", alt="photo")
                     p.team-member__name Jon Doel
-                    p.team-member__posotion General Meneger
+                    p.team-member__position General Meneger
                     include ./icon.pug
                 .team-member
                     img(src="../img/team1.png", alt="photo")
                     p.team-member__name Jon Doel
-                    p.team-member__posotion General Meneger
+                    p.team-member__position General Meneger
                     include ./icon.pug
                 .team-member
                     img(src="../img/team2.png", alt="photo")
                     p.team-member__name Jon Doel
-                    p.team-member__posotion General Meneger
+                    p.team-member__position General Meneger
                     include ./icon.pug
                 .team-member
                     img(src="../img/team3.png", alt="photo")
                     p.team-member__name Jon Doel
-                    p.team-member__posotion General Meneger
+                    p.team-member__position General Meneger
                     include ./icon.pug
+        section.services
+            h2.services__title Blog
+            p.services__text.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+            .blog-item
+                .blog-img
+                    img(class="blog-img__img" src="../img/blog1.png", alt="photo")
+                .blog-content
+                    .blog-content__header
+                        a(href="http://#") SEO Quis Vestibulum
+                    .blog-content__data
+                        span
+                            i.far.fa-calendar-alt
+                            date 27.04.2019
+                        span
+                            i.far.fa-file 
+                            span Development
+                    .blog-content__text.
+                        Dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi
+                        ut aliquip ex ea commodo consequat...
+            .blog-item
+                .blog-img
+                    img(class="blog-img__img" src="../img/blog2.png", alt="photo")
+                .blog-content
+                    .blog-content__header
+                        a(href="http://#") SEO Quis Vestibulum
+                    .blog-content__data
+                        span
+                            i.far.fa-calendar-alt
+                            date 27.04.2019
+                        span
+                            i.far.fa-file 
+                            span Development
+                    .blog-content__text.
+                        Dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi
+                        ut aliquip ex ea commodo consequat...
+            .blog-item
+                .blog-img
+                    img(class="blog-img__img" src="../img/blog3.png", alt="photo")
+                .blog-content
+                    .blog-content__header
+                        a(href="http://#") SEO Quis Vestibulum
+                    .blog-content__data
+                        span
+                            i.far.fa-calendar-alt
+                            date 27.04.2019
+                        span
+                            i.far.fa-file 
+                            span Development
+                    .blog-content__text.
+                        Dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi
+                        ut aliquip ex ea commodo consequat...
+            button.blog-button VIEW MORE
         script(src="../js/index.js")
 
 

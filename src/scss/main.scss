@@ -317,6 +317,7 @@ ul, li {
         }
     }
 }
+.our-team {background-color: #fff;}
 .team {
     display: flex;
     flex-direction: column;
@@ -328,16 +329,31 @@ ul, li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     img {
         margin: auto;
     }
+    .team-member__name {
+        font-family: $semibold;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .team-member__position {
+        font-size: 15px;
+        margin-bottom: 30px;
+        margin-top: 0px;
+    }
     
     .icon {
-        color: #00897b;
+        color: #f0f1f1;
         margin-right: -5px;
         transition: 0.3s;
-        &:hover {color: blue; font-size: 35px; margin-top: -7px;}
+        i:nth-child(2) {color: #00897b}
+        &:hover {
+            color: #3949ab; 
+            font-size: 35px; 
+            margin-top: -7px;
+        i:nth-child(2) {color: white;}
+        }
     }
 }
 .dots-style {
@@ -358,4 +374,61 @@ ul, li {
 }
 .dots-style li[class="slick-active"] button {
     background: #3949ab;
+ }
+ /*blog*/
+.blog-item {
+     display: flex;
+     padding: 0 115px;
+     margin-bottom: -4.8px;
+     justify-content: center;
+    &:nth-child(2n+1) {div:nth-child(1) {margin-right: 25px;}}
+    &:nth-child(2n) { 
+        flex-direction: row-reverse;
+        div:nth-child(2) {
+            margin-right: 25px;
+        }  
+     }
+ }
+ .blog-content {
+     display: flex;
+     flex-direction: column;
+     width: 568px;
+     height: 400px;
+     align-items: flex-start;
+     .blog-content__header {
+         padding: 55px 0 25px;
+         
+         a {
+            font-family: $semibold;
+            font-size: 25px;
+            color:#212121;
+            text-decoration: none;
+            &:hover { color: #00897b;}
+         }
+     }
+     .blog-content__data {
+         padding-bottom: 25px;
+         span {margin-right: 36px;}
+         i {margin-right: 12px;}
+     }
+     .blog-content__text {
+         font-size: 15px;
+         padding-right: 150px;
+     }
+ }
+ .blog-button {
+     font-family: 'Roboto', sans-serif;
+     font-weight: bold;
+     font-size: 20px;
+     color: white;
+     width: 220px;
+     height: 70px;
+     background-color: #00897b;
+     border: none;
+     margin-top: 126px;
+     &:hover {
+         background: transparent;
+         color: #00897b;
+         border: 2px solid #00897b;
+     }
  }
