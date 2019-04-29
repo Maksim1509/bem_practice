@@ -432,10 +432,13 @@ ul, li {
          border: 2px solid #00897b;
      }
  }
+ /*footer*/
  .services--footer {
     background: url(../img/footer.png) no-repeat;
     .services__title{color: white;}
     .services__text{color:white;}
+    padding: 120px 0 100px;
+    background-size:  100% 100%;
  }
  .contacts {
      display: flex;
@@ -470,44 +473,62 @@ ul, li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 110px;
-    
-    
     .user-info-field {
         display: flex;
         justify-content: center;
+        
     }
 
     .user-info-field input {
         width: 500px;
         height: 80px;
-        border-radius: 20px;
+        border-radius: 10px;
         border: none;
-        
+        &:focus {outline: none;}
         padding: 20px;
         font-family: $semibold;
         font-size: 20px;
     }
     .user-info-field input:nth-child(1) {margin-right: 30px;}
-    .message__field textarea{
+    .message__field {
         margin-top: 30px;
-        border-radius: 20px;
-        width:1070px;
-        height: 320px;
-        font-family: $semibold;
-        font-size: 20px;
-        padding: 20px;
+        textarea {
+            border-radius: 10px;
+            width:1070px;
+            height: 320px;
+            font-family: $semibold;
+            font-size: 20px;
+            padding: 20px;
+            border: none;
+            &:focus {outline: none;}
+        }      
     }
  }
- .botton-send {
+.botton-send {
      width: 100%;
      display: flex;
      justify-content: flex-end;
      margin-top: 30px;
+     
      input {
          width: 220px;
          height: 70px;
-         border-radius: 20px;
+         border-radius: 10px;
          background: white;
+         font-family: 'Roboto';
+         font-weight: bold;
+         font-size: 20px;
+         color: #212121;
+         border: none;
+         transition: 0.3s;
+         &:focus {outline: none;}
+         &:hover {background-color: grey;}
      }
+}
+.rights {
+    font-family: 'Roboto';
+         font-weight: bold;
+         font-size: 20px;
+         text-align: center;
+         padding: 22px 0;
  }
