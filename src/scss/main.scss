@@ -370,6 +370,7 @@ ul, li {
         border-radius: 50%;
         margin: 5px;
         cursor: pointer;
+        &:focus {outline: none;}
     }
 }
 .dots-style li[class="slick-active"] button {
