@@ -120,8 +120,9 @@ ul, li {
 .about-us__design {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: space-around; 
     padding: 125px 0;
+    width: 100%;
     img {
         width: 62px;
         height: 62px;
@@ -130,7 +131,7 @@ ul, li {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 60px;
+        
         h3 {
             font-family: 'Open Sans Semibold';
             font-size: 22px;
@@ -154,6 +155,7 @@ ul, li {
     flex-direction: column;
     align-items: center;
     font-weight: wrap;
+    width: 100%;
 }
 .services__title {
     font-size: 30px;
@@ -172,8 +174,7 @@ ul, li {
 .services-types {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    
+    justify-content: space-around;
     .sevices-types__type {
         display: flex;
         flex-direction: column;
@@ -181,7 +182,7 @@ ul, li {
         justify-content: space-around;
         padding: 56px 30px 48px;
         background-color: white;
-        margin-right: 30px;
+       
         margin-bottom: 30px;
         color: #212121;
         transition: 0.5s;
@@ -361,12 +362,14 @@ ul, li {
     text-align: center;
 
 }
+
 .team-member {
     display: flex;
     flex-direction: column;
     align-items: center;
     img {
         margin: auto;
+        width: 90%;
         
     }
     .team-member__name {
@@ -417,7 +420,7 @@ ul, li {
 .blog-item {
      display: flex;
      flex-wrap: wrap;
-     padding: 0 115px;
+     
      margin-bottom: -4.8px;
      justify-content: center;
      width: 100%;
@@ -623,9 +626,121 @@ ul, li {
 
         }
     }
+    .about-us {
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+        background-color: white;
+        padding: 125px 0px;
+        color: #212121;
+        .about-us__title {
+            font-family: 'Open Sans Bold';
+            font-size: 30px;
+        }
+        .about-us__text {
+           text-align: center;
+           font-size: 15px;
+           line-height: 1.467;
+           
+        }
+    }
+    .portfolio {
+        background-color: white;
+        .portfolio-buttons{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .button {
+            margin-top: 20px;
+            min-width:170px;
+            color: white;
+            border: 2px solid #00897b;
+            background: #00897b;
+            &:hover {
+                background: transparent;
+                color: #212121;
+            }
+        }
+        .focused {
+            background: transparent;
+            color: #212121;
+        }
+        .portfolio-items {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .portfolio-items__item {
+        margin: 0;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .text {
+            display: none;
+    
+        }
+        &:hover {
+            .text {
+                display: block;
+                position: absolute;
+                text-align: center;
+                top: 40%;
+                left: 40%;
+                color: white;
+                font-family: $semibold;
+                font-size: 20px;
+                .p {
+                    font-size: 15px;
+                }
+            }
+            img {
+                filter: brightness(25%);
+                transition: 0.3s;
+            }
+        }
+    }
+    .services {
+        .services-types {
+            .sevices-types__type {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                padding: 30px 10px 30px;
+                background-color: white;
+               
+                margin-bottom: 20px;
+                color: #212121;
+                transition: 0.5s;
+            }
+        }
+    }
      nav {display: none;}
     .menu-icon {
         display: block;
+    }
+    #blog {
+        .blog-item {
+            flex-direction: column;
+            align-items: center;
+            .blog-img{
+                margin: 0;
+                .blog-img__img {
+                    width: 300px;
+                }
+            }
+            .blog-content {
+                width: 90%;
+                margin: 0;
+                padding-left: 10px;
+            }
+        }
+        
     }
  }
  @media screen and (max-width: 768px) {
