@@ -11,31 +11,35 @@ html(lang="en")
 
         link(rel="stylesheet", href="../scss/main.scss")
     body
+        #toTop
+            i(class="fas fa-chevron-up")
         header.menu-bar
                 include ./logo
                 nav
                     ul.menu
                         li.menu__item
-                            a(href="#") Home
+                            a(href="/") Home
                         li.menu__item
-                            a(href="#") About
+                            a(href="#about") About
                         li.menu__item
-                            a(href="#") Servicing
+                            a(href="#servicing") Servicing
                         li.menu__item
-                            a(href="#") Portfolio
+                            a(href="#portfolio") Portfolio
                         li.menu__item
-                            a(href="#") Blog
+                            a(href="#blog") Blog
                         li.menu__item
-                            a(href="#") Contact us
+                            a(href="#contact") Contact us
                         li.menu__item
                             i(class="fas fa-search")
+                .menu-icon
+                    i(class="fas fa-bars")
         header.header
             h1.header__title Web development project
             p.header__text Very suitable to support all web development projects
             .header__button
                 button.button OUR SERVICES
                 button.button HIRE IS NOW
-        section.about-us
+        section.about-us#about
             h2.about-us__title About Us
             p.about-us__text.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -59,7 +63,7 @@ html(lang="en")
                     p.
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                         sed do eiusmod tempor
-        section.services
+        section.services#services
             h2.services__title Our Services
             p.services__text.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -113,7 +117,7 @@ html(lang="en")
                         dignissimos ducimus qui blanditiis
                         praesentium voluptatum iti atque corrupti quos.
                     button.button READ MORE
-        section.services.portfolio
+        section.services.portfolio#portfolio
             h2.services__title Latest Works
             p.services__text.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -251,7 +255,7 @@ html(lang="en")
                     p.team-member__name Ronobir Sing
                     p.team-member__position Admin
                     include ./icon.pug
-        section.services
+        section.services#blog
             h2.services__title Blog
             p.services__text.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -308,7 +312,7 @@ html(lang="en")
                         quis nostrud exercitation ullamco laboris nisi
                         ut aliquip ex ea commodo consequat...
             button.blog-button VIEW MORE
-        footer.services.services--footer
+        footer.services.services--footer#contact
             h2.services__title Contact Us
             p.services__text.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor

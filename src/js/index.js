@@ -1,3 +1,5 @@
+/* eslint-disable prefer-arrow-callback */
+/* eslint-disable func-names */
 /* eslint-disable linebreak-style */
 import $ from 'jquery';
 import slick from 'slick-carousel';
@@ -76,6 +78,49 @@ $('document').ready(
     arrows: false,
     dots: true,
     dotsClass: 'dots-style',
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      }],
   }),
 );
 
+$('document').ready(() => {
+  $('li.menu__item a[href^="#"]').click(function () {
+    const target = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(target).offset().top,
+    }, 500);
+    return false;
+  });
+});
+
+$(document).ready(() => {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() !== 0) {
+      $('#toTop').fadeIn();
+    } else $('#toTop').fadeOut();
+  });
+  $('#toTop').click(function () {
+    $('html, body').animate({
+      scrollTop: 0,
+    }, 800);
+  });
+  $('.menu-icon').click(function () {
+    $('nav').slideToggle(500);
+    $('ul.menu').css({
+      'flex-direction': 'column',
+    });
+    if ($('.menu-icon').html() === '<i class="fas fa-bars"></i>') {
+      $(this).html('<i class="far fa-window-close"></i>');
+    } else {
+      $(this).html('<i class="fas fa-bars"></i>');
+    }
+  });
+});

@@ -12,9 +12,27 @@ ul, li {
     padding: 0;
     margin: 0;
 }
+#toTop {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    bottom: 10px;
+    right: 10px;
+    background: #3949ab;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    
+}
 .menu-bar {
     display: flex;
     align-items: center;
+    
     color: #212121;
     justify-content: space-around;
     padding: 20px 0;
@@ -38,12 +56,15 @@ ul, li {
 }
 /*header*/
 .header {
-    background: url(../img/header.png) no-repeat 0 100%;
+    width: 100%;
+    background: url(../img/header.png) no-repeat 0 0;
     display: flex;
-    padding: 180px 0;
+    flex-direction: column;
+    flex-wrap: wrap;
     color: white;
     align-items: center;
-    flex-direction: column;
+    justify-content: space-around;
+    padding: 180px 0;
     background-size: 100%;
     .header__title {
         font-size: 60px;
@@ -61,7 +82,7 @@ ul, li {
 }
 .button {
     font-family: $semibold;
-    font-size: 20px;
+    font-size: 1rem;
     padding: 10px 25px;
     margin: 0 10px;
     background-color: #00897b;
@@ -532,4 +553,44 @@ ul, li {
          font-size: 20px;
          text-align: center;
          padding: 22px 0;
+ }
+.menu-icon{
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: #3949ab;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+}
+ @media screen and (max-width: 320px) {
+     body {max-width: 320px;}
+    .header {
+        background-size: 100% 100%;
+        padding:0;
+        padding: 10px 0;
+        text-align: center;
+        .header__title {
+            font-size: 35px;
+            white-space: pre-line;
+            margin: 0;
+        }
+        .header__text {
+            margin: 20px 0;
+            font-size: 15px;
+        }
+        .header__button {
+            .button {
+                font-size: 10px;
+            }
+
+        }
+    }
+     nav {display: none;}
+    .menu-icon {
+        display: block;
+    }
  }
