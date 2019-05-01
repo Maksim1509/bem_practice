@@ -623,7 +623,7 @@ ul, li {
     cursor: pointer;
 }
 
- @media screen and (max-width: 320px) {
+ @media screen and (max-width: 480px) {
     body {max-width: 320px;}
     .header {
         background-size: 100% 100%;
