@@ -623,8 +623,16 @@ ul, li {
     cursor: pointer;
 }
 
+@media screen and (max-width: 380px) {
+    .price {
+        .plans {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
  @media screen and (max-width: 480px) {
-    body {max-width: 320px;}
+    body {max-width: 480px;}
     .header {
         background-size: 100% 100%;
         padding:0;
