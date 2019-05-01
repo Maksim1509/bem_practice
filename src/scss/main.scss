@@ -5,7 +5,7 @@ body {
     max-width: 1400px;
     width: 100%;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     font-family: $regular;
 }
 ul, li {
@@ -18,7 +18,7 @@ ul, li {
     position: fixed;
     z-index: 999;
     bottom: 10px;
-    left: 10px;
+    right: 10px;
     background: #3949ab;
     color: white;
     text-align: center;
@@ -175,6 +175,7 @@ ul, li {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    width: 80%;
     .sevices-types__type {
         display: flex;
         flex-direction: column;
@@ -283,18 +284,21 @@ ul, li {
 .plans {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-
+    justify-content: space-around;
+    width: 90%;
 }
 .plan {
+    width: 30%;
     max-width: 370px;
+    min-width: 280px;
     background-color: white;
     display: flex;
     flex-direction: column;
     color: white;
-    margin-right: 30px;
+    
     transition: 0.3s;
     margin-top: 20px;
+    
     .plan__header {
         background: url(../img/price_head_bg.png) no-repeat;
         background-size: cover;
@@ -520,68 +524,83 @@ ul, li {
          font-size: 20px;
      }
  }
-.message {
-    padding-top: 80px;
+.feedback {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
+    width: 80%;
+    margin-top: 50px;
+}
+.input-name {
+    width: 45%;
+    height: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    outline: none;
+    padding: 10px 15px;
+    border: 1px grey;
+    transition: 0.3s;
+    &:hover {box-shadow: inset 0px 0px 15px 5px #adabad;}
+    font-family: 'Roboto';
+    font-size: 1rem;
+    font-weight: bold;
+}
+.input-mail {
+    width: 45%;
+    height: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    outline: none;
+    padding: 10px;
+    border: 1px grey;
+    &:hover {box-shadow: inset 0px 0px 15px 5px #adabad;}
+    transition: 0.3s;
+    font-family: 'Roboto';
+    font-size: 1rem;
+    font-weight: bold;
+}
+.textarea-message {
     width: 100%;
-    box-sizing: border-box;
-    .user-info-field {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        width: 80%;
-        input {
-            width: 50%;
-            min-width: 220px;
-            margin-top: 20px;
-            height: 5vh;
-            border-radius: 10px;
-            border: none;
-            &:focus {outline: none;}
-            padding: 20px;
-            font-family: $semibold;
-            font-size: 20px;
-        }
-    }
-    .message__field {
-        margin-top: 30px;
-        width: 80%;
-        margin-top: 20px;
-        
-        textarea {
-            border-radius: 10px;
-            width:80%;
-            height: 15vh;
-            font-family: $semibold;
-            font-size: 20px;
-            padding: 20px;
-            border: none;
-            &:focus {outline: none;}
-        }      
-    }
- }
+    margin-top: 20px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-family: 'Roboto';
+    font-size: 1rem;
+    color: #212121;
+    outline: none;
+    padding: 15px 10px;
+    &:hover {box-shadow: inset 0px 0px 15px 5px #adabad;}
+    transition: 0.3s;
+    
+}
 .botton-send {
-     width: 90%;
      display: flex;
      justify-content: flex-end;
      margin-top: 30px;
-     padding-right: 30px;
-     
+     width: 100%;     
      input {
          width: 220px;
          height: 70px;
-         border-radius: 10px;
+         border-top-left-radius: 30px;
+         border-bottom-left-radius: 30px;
+         border-top-right-radius: 30px;
+         border-bottom-right-radius: 30px;
          background: white;
          font-family: 'Roboto';
          font-weight: bold;
-         font-size: 20px;
+         font-size: 1.4rem;
          color: #212121;
          border: none;
          transition: 0.3s;
-         &:focus {outline: none;}
-         &:hover {background-color: grey;}
+         outline: none;
+         &:hover {box-shadow: inset 0px 0px 15px 5px #adabad;}
      }
 }
 .rights {
@@ -603,8 +622,9 @@ ul, li {
     padding: 5px;
     cursor: pointer;
 }
+
  @media screen and (max-width: 320px) {
-     body {max-width: 320px;}
+    body {max-width: 320px;}
     .header {
         background-size: 100% 100%;
         padding:0;
@@ -705,6 +725,7 @@ ul, li {
         }
     }
     .services {
+        padding-top: 40px;
         .services-types {
             .sevices-types__type {
                 display: flex;
@@ -720,9 +741,30 @@ ul, li {
             }
         }
     }
-     nav {display: none;}
+    .price {
+        .plan {
+            .plan__header {
+                padding: 20px 0;
+            }
+            li {
+                padding: 20px 0 5px;
+            }
+            .plan__footer {
+                padding: 20px 0;
+            }
+        }
+    }
+   
+    .menu {
+        padding-right: 20px;
+        li {
+            border-bottom: 2px solid #3949ab;
+            padding: 10px 0 5px;
+        }
+    }
     .menu-icon {
         display: block;
+        align-self: flex-start;
     }
     #blog {
         .blog-item {
@@ -735,12 +777,107 @@ ul, li {
                 }
             }
             .blog-content {
+                align-items: stretch;
                 width: 90%;
                 margin: 0;
                 padding-left: 10px;
+                height: 300px;
+                .blog-content__header {
+                    margin: 0;
+                }
+                .blog-content__data {
+                    margin: 0;
+                    display: flex;
+                }
+                .blog-content__text {
+                    padding: 0;
+                }
             }
         }
+        .blog-button {
+            margin-top: 20px;
+        }
         
+    }
+    .feedback {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin-top: 50px;
+    }
+    .input-name {
+        width: 90%;
+        height: 30px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        outline: none;
+        padding: 10px 15px;
+        border: 1px grey;
+        transition: 0.3s;
+        &:hover {box-shadow: inset 0px 0px 15px 5px #adabad;}
+        font-family: 'Roboto';
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .input-mail {
+        width: 90%;
+        height: 30px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        outline: none;
+        padding: 10px 15px;
+        border: 1px grey;
+        &:hover {box-shadow: inset 0px 0px 15px 5px #adabad;}
+        transition: 0.3s;
+        font-family: 'Roboto';
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .textarea-message {
+        width: 90%;
+        margin-top: 20px;
+        border: none;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        font-family: 'Roboto';
+        font-size: 1rem;
+        color: #212121;
+        outline: none;
+        padding: 15px 10px;
+        &:hover {box-shadow: inset 0px 0px 15px 5px #adabad;}
+        transition: 0.3s;
+        
+    }
+    .botton-send {
+         display: flex;
+         justify-content: flex-end;
+         margin-top: 20px;
+         width: 100%;     
+         input {
+             width: 150px;
+             height: 50px;
+             border-top-left-radius: 30px;
+             border-bottom-left-radius: 30px;
+             border-top-right-radius: 30px;
+             border-bottom-right-radius: 30px;
+             background: white;
+             font-family: 'Roboto';
+             font-weight: bold;
+             font-size: 1.4rem;
+             color: #212121;
+             border: none;
+             transition: 0.3s;
+             outline: none;
+             &:hover {box-shadow: inset 0px 0px 15px 5px #adabad;}
+         }
     }
  }
  @media screen and (max-width: 768px) {
@@ -766,7 +903,7 @@ ul, li {
 
        }
    }
-    nav {display: none;}
+   nav {display: none;}
    .menu-icon {
        display: block;
    }

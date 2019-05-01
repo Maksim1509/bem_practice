@@ -93,6 +93,7 @@ html(lang="en")
                         dignissimos ducimus qui blanditiis
                         praesentium voluptatum iti atque corrupti quos.
                     button.button READ MORE
+            .services-types
                 .sevices-types__type
                     i(class="fas fa-mobile-alt icon")
                     h3 Documentation
@@ -330,12 +331,10 @@ html(lang="en")
                     .contact-item__icon
                         i.far.fa-envelope
                     .contact-item__text quickmasud@gmail.com quickmasud@yahoo.com
-            .message
-                .user-info-field
-                    input(type="text", placeholder="Your NAME")
-                    input(type="email", placeholder="Your Email")
-                .message__field
-                    textarea(name="message", rows="7" placeholder="Write message")
+            .feedback
+                input(type="text" name="user-name", placeholder="Your Name").input-name
+                input(type="email", name="user-mail", placeholder="Your e-mail").input-mail
+                textarea(placeholder="Your message", name="message", cols="30", rows="10").textarea-message      
                 .botton-send
                     input(type="button", value="SEND")
         section.rights All rights Reserved © 2019
